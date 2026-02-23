@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healing Area</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <!-- Background video -->
+    <video class="bg-video" src="assets/bg.mp4" autoplay loop muted playsinline></video>
+    
+    <!-- Dark overlay so text is readable -->
+    <div class="overlay"></div>
+
+    <!-- Your UI on top -->
+    <section class="ui">
+      <header class="top">
+        <h1 class="title">Healing Area</h1>
+        <p class="subtitle">Layer sounds + relax.</p>
+      </header>
+
+      <div class="panel">
+        <button id="startBtn" class="btn primary">Start sound</button>
+
+        <div class="grid">
+          <button id="musicBtn" class="btn" disabled>Toggle Music</button>
+          <button id="noiseBtn" class="btn" disabled>Toggle Brown Noise</button>
+          <button id="rainBtn" class="btn" disabled>Toggle Rain</button>
+          <button id="chimeBtn" class="btn" disabled>Play Chime</button>
+        </div>
+
+        <div class="sliders">
+          <label class="slider">
+            <span>Music</span>
+            <input id="musicVol" type="range" min="0" max="1" step="0.01" value="0.35" disabled />
+          </label>
+
+          <label class="slider">
+            <span>Noise</span>
+            <input id="noiseVol" type="range" min="0" max="1" step="0.01" value="0.25" disabled />
+          </label>
+
+          <label class="slider">
+            <span>Rain</span>
+            <input id="rainVol" type="range" min="0" max="1" step="0.01" value="0.25" disabled />
+          </label>
+        </div>
+
+        <p class="hint">
+          Audio usually needs one click to start (browser rule). Click <b>Start sound</b> once, then use the controls.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Fullscreen layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Video behind everything */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark gradient overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(0,0,0,0.65));
+}
+
+/* UI container */
+.ui {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* change to center/top if you want */
+  padding: 24px;
+  color: white;
+}
+
+.top {
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  opacity: 0.9;
+}
+
+/* Control panel box */
+.panel {
+  max-width: 560px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* Soundboard grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* Sliders */
+.sliders {
+  display: grid;
+  gap: 10px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.slider input {
+  width: 100%;
+}
+
+.hint {
+  margin: 12px 0 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
